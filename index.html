@@ -217,18 +217,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          In widely adopted one-step reinforcement learning (RL) frameworks for table tennis robots, 
-          the selection of hitting position is often constrained, yielding only locally optimal solutions. 
-          Here, we propose a global hitting-positing optimization method within the one-step RL paradigm. 
-          By introducing the action space with a single scalar dimension and incorporating dynamics-based 
-          prediction, our approach enables the search for globally optimal strokes within the robot’s physical
-           limits. Across diverse task settings, the proposed method consistently outperforms baseline methods 
-           while requiring comparable training time. We further introduce virtual sampling for the first time 
-           in table tennis robot RL training, and demonstrate its effectiveness in improving sample and 
-           training efficiency for arbitrary targets task. In particular, we employ the rarely used collaborative 
-           robot in table tennis tasks and demonstrate its potential. In addition, we release an open-source 
-           trapezoidal velocity trajectory planning module tailored for table tennis robot strokes, aiming to 
-           facilitate future research in the field.           </p>
+          In widely adopted one-step reinforcement learning (RL) frameworks for table tennis robots, the selection of the hitting position is often constrained, yielding a severely limited RL exploration space and a poor local optimum stroke. Here, we propose a hitting-positing optimization method within the one-step RL paradigm. By introducing the action space with a single scalar dimension and incorporating dynamics-based prediction, our approach could expand the search space for better stroke solutions within the robot’s physical limits, while maintaining high sample and training efficiency. Across diverse task settings, the proposed method improves stroke performance while having a similar time consumption. We further introduce virtual sampling in table tennis robot RL training, the effectiveness in improving sample and training efficiency is explicitly displayed. In particular, we employ a collaborative robot that has so far been rarely used in table tennis tasks. Its potential for tight interactive sports is demonstrated, and its intrinsic safety and scalability make real-world deployment feasible. The project code is open sourced, aiming to facilitate future research in the field.           </p>
         </div>
       </div>
     </div>
@@ -253,12 +242,7 @@
         <!-- 文字描述部分 -->
         <div class="content has-text-justified" style="margin-top: 1.5rem;">
           <p>
-            The overall control pipeline of the robot: Detect the ball in 200 Hz until 
-            the ball arrives the net; Get the policy's output by ball's state at net 
-            plane and target landing position; Determine the hitting position by 
-            scaled-OHPS; Conduct the inverse kinematics and trapezoidal joint 
-            trajectory planning base on policy's output; Safety check in Cartesian space; 
-            Execution if the planned trajectory is safe.
+            The overall control pipeline of the robot: Detecting the ball in 200 Hz until the ball arrives at the net; Getting the policy's output by the ball's state at the net plane and target landing position; Determining the hitting position by scaled-HPO; Conducting the inverse kinematics and trapezoidal joint trajectory planning base on policy's output; Safety check in Cartesian space; Execution if the planned trajectory is safe.
           </p>
         </div>
       </div>
